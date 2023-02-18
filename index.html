@@ -14,7 +14,6 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -34,12 +33,34 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '3056018216';
+    var serviceWorkerVersion = '3824202161';
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
+  <script type="module">
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+
+
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCpTCv5jZ6V2CjHff1-5V5loOgsFJ5N3Jc",
+    authDomain: "htmlenhanceeditor.firebaseapp.com",
+    databaseURL: "https://htmlenhanceeditor-default-rtdb.firebaseio.com",
+    projectId: "htmlenhanceeditor",
+    storageBucket: "htmlenhanceeditor.appspot.com",
+    messagingSenderId: "225991021584",
+    appId: "1:225991021584:web:bf737838ab54141a51a695",
+    measurementId: "G-EKBENG5PEK"
+  };
+
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  </script>
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
